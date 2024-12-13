@@ -158,20 +158,9 @@ class TextHighlight extends StatelessWidget {
                     );
                   }
 
-                  return WidgetSpan(
-                    alignment: spanAlignment,
-                    child: InkWell(
-                      onTap: highlightedWord.onTap,
-                      child: Container(
-                        padding: highlightedWord.padding,
-                        decoration: highlightedWord.decoration,
-                        child: Text(
-                          w,
-                          style: highlightedWord.textStyle ?? textStyle,
-                          textScaleFactor: 1.0,
-                        ),
-                      ),
-                    ),
+                  return TextSpan(
+                    text: w,
+                    style: highlightedWord.textStyle ?? textStyle,
                   );
                 }).toList();
               } catch (e) {}
